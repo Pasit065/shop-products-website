@@ -1,0 +1,47 @@
+
+<!DOCTYPE html>
+<html lang="en"
+xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+    <link rel="stylesheet" th:href="@{/css/bootstrap.min.css}">
+</head>
+<body align="center">
+    <h1>Client details have been found: </h1>
+    <div class="container">
+        <div class="row">
+            <div>
+                <p class="col-md-12">Client id: <span th:text="${clientForm.clientId}"></span></p>
+            </div>
+            <div>
+                <p class="col-md-12">Name: <span th:text="${clientForm.name}"></span></p>
+            </div>
+            <div>
+                <p class="col-md-12">Surname: <span th:text="${clientForm.surname}"></span></p>
+            </div>
+            <div>
+                <p class="col-md-12">Total payment: <span th:text="${clientForm.totalPayment}"></span></p>
+            </div>
+            <div>
+                <p class="col-md-12">Total receipts: <span th:text="${totalReceipts}"></span></p>
+            </div>
+            <div>
+                <p class="col-md-12">Status: <span th:text="${clientForm.status}"></span></p>
+            </div>
+            <div>
+                <p class="col-md-12">Lastest updated time: <span th:text="${clientForm.lastestUpdated}"></span></p>
+            </div>
+        </div>
+        <div class="row">
+            <button><a th:href="@{/get-client-detail-form}">Search again</a></button>
+        </div>
+        <div class="row">
+            <button><a th:href="@{/home-webpage}">Home</a></button>
+        </div>
+        
+    </div>
+    
+</body>
+</html>

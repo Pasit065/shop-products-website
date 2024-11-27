@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <link rel="stylesheet" th:href="@{/css/bootstrap.min.css}">
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+
+    <title>Products shopping homepage</title>
+</head>
+<body>
+    <div class="container" className="home-display-bx">
+        <div class="row">
+            <div className="header-content" class="col-md-9">
+                <h2>Welcome to my multiple web pages for shopping sim cards and phone case.</h2>
+                <h3>Today here this web contain:</h3>
+                <ul>
+                    <li>Buy products form.</li>
+                    <li>View client status.</li>
+                </ul>
+            </div>
+        </div>
+        <div class="row" className="button-area">
+            <div class="col-md-3">
+                <button><a th:href="@{/buy-product-form}">Shopping here</button>
+            </div>
+            <div class="col-md-9">
+                <button><a th:href="@{/get-client-detail-form}">View client detail</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

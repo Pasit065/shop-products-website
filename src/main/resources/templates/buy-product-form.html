@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en"
+xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+    <link rel="stylesheet" th:href="@{/css/bootstrap.min.css}">
+</head>
+<body>
+    <div align="center" class="container">   
+        <div class="buy-product-bx">
+            <div class="all-products-detail">
+                <h2>Here are the list of our product.</h2>
+                <div th:each="prod: ${allProductsDetail.entrySet()}" class="row">
+                    <p class="col-md-6">
+                        Product name: <span th:text="${prod.key}" ></span>
+                    </p>
+                    <p class="col-md-6">
+                        Price: <span th:text="${prod.value.price}" ></span>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <form th:action="@{/buy-product-form/save}" th:object="${clientForm}" method="post">
+
+            <div class="row">
+                <label class="col-md-3">Name: </label>
+                <input class="col-md-7" placeholder="name" type="text" th:field="*{name}" />
+            </div>
+
+            <div class="row">
+                <label class="col-md-3">Surname: </label>
+                <input class="col-md-7" placeholder="surname"  type="text" th:field="*{surname}" />
+            </div>
+
+            <div class="row">
+                <label class="col-md-3">Client id: </label>
+                <input class="col-md-7" type="text" placeholder="client id" th:field="*{clientId}" />
+            </div>
+
+            <div class="row">
+                <label class="col-md-3">Select product: </label>
+                <select th:field="*{productNameBuy}" class="col-md-7">
+                    <option th:each="product : ${listProducts}" th:value="${product}" th:text="${product}"></option>
+                </select>
+            </div>
+
+            <div class="row">
+                <div class="col-md-12">
+                    <button type="submit">Confirm</button>
+                </div>
+                <div class="col-md-12">
+                    <button><a th:href="@{/home-webpage}">Home</a></button>    
+                </div>
+                
+            </div>
+        </form>
+    </div>
+    
+</body>
+</html>

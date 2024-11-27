@@ -1,0 +1,25 @@
+
+<!DOCTYPE html>
+<html lang="en"
+xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+    <link rel="stylesheet" th:href="@{/css/bootstrap.min.css}">
+</head>
+<body align="center">
+    <h1>Client details have not been found: </h1>
+    <div class="container">
+        <div class="row">
+            <div>
+                <p class="col-md-12">Client id: <span th:text="${clientForm.clientId}"></span> cannot be found or some exception has occured.</p>
+            </div>
+        </div>   
+        <div class="row">
+            <button><a th:href="@{/get-client-detail-form}">Search again</a></button>
+            <button><a th:href="@{/home-webpage}">Home</a></button>
+        </div>
+    </div>
+</body>
+</html>

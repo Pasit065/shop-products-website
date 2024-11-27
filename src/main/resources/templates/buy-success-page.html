@@ -1,0 +1,49 @@
+
+<!DOCTYPE html>
+<html lang="en"
+xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+    <link rel="stylesheet" th:href="@{/css/bootstrap.min.css}">
+</head>
+<body align="center">
+    <h1>Receipt details: </h1>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <p>Client id: <span th:text="${clientForm.clientId}"></span></p>
+            </div>
+            <div class="col-md-12">
+                <p>Name: <span th:text="${clientForm.name}"></span></p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <p>Surname: <span th:text="${clientForm.surname}"></span></p>
+            </div>
+            <div class="col-md-12">
+                <p>Status: <span th:text="${clientForm.status}"></span></p>
+            </div>
+            <div class="col-md-12">
+                <p>Total: <span th:text="${receipt.price}"></span></p>
+            </div>
+            <div class="col-md-12">
+                <p>Item: <span th:text="${receipt.productName}"></span></p>
+            </div>
+            <div class="col-md-12">
+                <p>Time: <span th:text="${receipt.receiptTime}"></span></p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <button><a th:href="@{/buy-product-form}">Buy again</a></button>
+                <button><a th:href="@{/home-webpage}">Home</a></button>
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>
+

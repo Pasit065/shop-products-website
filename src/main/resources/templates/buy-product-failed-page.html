@@ -1,0 +1,35 @@
+
+<!DOCTYPE html>
+<html lang="en"
+xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+    <link rel="stylesheet" th:href="@{/css/bootstrap.min.css}">
+</head>
+<body align="center">
+    <h1>Receipt details: </h1>
+    <div class="container">
+        <div class="row">
+            <h2>Sorry but your submit is failed for some reason...</h2>
+            <p th:text="${failedMessage}"></p>
+            <div class="col-md-12">
+                <p>Product name: <span th:text="${receipt.productName}"></span></p>
+            </div>
+            <div class="col-md-12">
+                <p>Item: <span th:text="${clientForm.productNameBuy}"></span></p>
+            </div>
+            <div class="col-md-12">
+                <p>Time: <span th:text="${receipt.receiptTime}"></span></p>
+            </div>
+        </div>
+        <div class="row">
+            <button><a th:href="@{/buy-product-form}">Try again</a></button>
+            <button><a th:href="@{/home-webpage}">Home</a></button>
+        </div>
+    </div>
+    
+</body>
+</html>

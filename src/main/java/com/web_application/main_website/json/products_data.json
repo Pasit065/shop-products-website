@@ -1,0 +1,14 @@
+{
+    "SIM_STANDARD": {
+        "name": "SIM_STANDARD",
+        "price": 450
+    },
+    "SIM_PREMIUM": {
+        "name": "SIM_PREMIUM",
+        "price": 700
+    },
+    "phone_case": {
+        "name": "phone_case",
+        "price": 300
+    }
+}
