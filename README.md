@@ -10,7 +10,7 @@ The project utilize **Spring Boot** framework along with **Thymeleaf** to provid
 This project utilize 2 forms which rendered as 2 paths.
 
 1. `buy-product-form` used to receive a buy product from users. Use `localhost:8080/buy-product-form` to access this form.
-2. `get-client-id-detail-form` used to search client details from specified `client_id`. Use `localhost:8080/get-client-id-detail-form` to access this form.
+2. `get-client-detail-form` used to search client details from specified `clientId`. Use `localhost:8080/get-client-id-detail-form` to access this form.
 
 ## Diagram
 ### Buy product form
